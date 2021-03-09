@@ -165,10 +165,10 @@ namespace HomeWork
 
         }
 
-        public static void FifthTask()
+        public static string FifthTask(int number)
 
         {
-            int number = Convert.ToInt32(Console.ReadLine());
+            
 
             string n1 = "один";
             string n2 = "два";
@@ -222,8 +222,8 @@ namespace HomeWork
                     case 9:
                         Console.WriteLine(n9);
                         break;
-                  
-               
+
+
 
                 }
             }
@@ -238,35 +238,35 @@ namespace HomeWork
                 {
 
                     case 10:
-                        Console.WriteLine("десять");
+                        head = "десять";
                         break;
 
                     case 11:
-                        Console.WriteLine("одиннадцать");
+                        head = "одиннадцать";
                         break;
                     case 12:
-                        Console.WriteLine("двенадцать");
+                        head = "двенадцать";
                         break;
                     case 13:
-                        Console.WriteLine("тринадцать");
+                        head = "тринадцать";
                         break;
                     case 14:
-                        Console.WriteLine("четырнадцать");
+                        head = "четырнадцать";
                         break;
                     case 15:
-                        Console.WriteLine("пятнадцать");
+                        head = "пятнадцать";
                         break;
                     case 16:
-                        Console.WriteLine("шестнадцать");
+                        head = "шестнадцать";
                         break;
                     case 17:
-                        Console.WriteLine("семнадцать");
+                        head = "семнадцать";
                         break;
                     case 18:
-                        Console.WriteLine("восемнадцать");
+                        head = "восемнадцать";
                         break;
                     case 19:
-                        Console.WriteLine("девятнадцать");
+                        head = "девятнадцать";
                         break;
                 }
             }
@@ -335,9 +335,10 @@ namespace HomeWork
                         break;
                 }
 
-                Console.WriteLine(head + " " + tale);
-
+                
             }
+            string result = head + " " + tale;
+            return result;
         }
     }
 }

@@ -7,12 +7,11 @@ namespace HomeWork
         {
         }
 
-        public static void FirstTask()
+        public static int FirstTask(int a,int b)
         {
             // Пользователь вводит 2 числа (A и B). Возвести число A в степень B.
 
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
+            
             int result = 1;
                 
             while (b > 0)
@@ -20,26 +19,31 @@ namespace HomeWork
                 result = result * a;
                 b--;
             }
-            Console.WriteLine(result);
+            return result;
 
         }
 
-        public static void SecondTask()
+        public static int[] SecondTask(int a)
         {
             //Пользователь вводит 1 число (A). Вывести все числа от 1 до 1000, которые делятся на A
 
-            int a = Convert.ToInt32(Console.ReadLine());
-            
+
+            int[] ar = new int[1000 / a];
             for (int i = 1; i < 1000; i++)
             {
+                int j = 0;
                 
                 if ( i % a == 0)
                 {
-                    Console.WriteLine(i);
+                    ar[j] = i;
+                    j++;
                  
                 }
+
             
             }
+            return ar;
+
             
         }
 
