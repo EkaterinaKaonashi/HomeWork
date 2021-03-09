@@ -10,14 +10,13 @@ namespace HomeWork
         }
 
 
-        public static void FirstTask()
+        public static int FirstTask(int a,int b)
         {
             //Пользователь вводит 2 числа(A и B).Если A > B, подсчитать A+B, если A = B, подсчитать A* B, если A < B, подсчитать A-B.
 
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
+            
 
-            int result;
+            int result = 0; ;
 
             if (a > b)
             {
@@ -35,30 +34,33 @@ namespace HomeWork
                 Console.WriteLine(result);
             }
 
-        }
+            return result;
 
-        public static void SecondTask()
+        }
+        
+        public static string SecondTask(int x,int y)
         {
             //Пользователь вводит 2 числа(X и Y).Определить какой четверти принадлежит точка с координатами(X, Y).
-            int x = Convert.ToInt32(Console.ReadLine());
-            int y = Convert.ToInt32(Console.ReadLine());
+            string result = "";
 
             if (x > 0 && y > 0)
             {
-                Console.WriteLine("Это первая четверть");
+                result = "Это первая четверть";
             }
             if (x < 0 && y > 0)
             {
-                Console.WriteLine("Это вторая четверть");
+                result = "Это вторая четверть";
             }
             if (x < 0 && y < 0)
             {
-                Console.WriteLine("Это третья четверть");
+                result = "Это третья четверть";
             }
             if (x > 0 && y < 0)
             {
-                Console.WriteLine("Это четвертая четверть");
+                result = "Это четвертая четверть";
             }
+
+            return result;
 
         }
 
