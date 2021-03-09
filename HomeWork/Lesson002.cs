@@ -122,41 +122,46 @@ namespace HomeWork
             return ar;
         }
 
-        public static void FourthTask()
+        public static double[] FourthTask(double a , double b, double c)
         {
             //Пользователь вводит 3 числа(A, B и С).Выведите в консоль решение(значения X) квадратного уравнения стандартного вида, где AX2 + BX + C = 0.
 
-            double a = Convert.ToInt32(Console.ReadLine());
-            double b = Convert.ToInt32(Console.ReadLine());
-            double c = Convert.ToInt32(Console.ReadLine());
+            
 
             double dis = (b * b) - 4 * a * c;
             double x1 = 0;
             double x2;
             double x;
+            double[] ar = new double[1];
 
             if (dis < 0)
+
             {
+                
                 Console.WriteLine("Корней нет");
 
             }
             if (dis == 0)
             {
                 x  = -(b / 2 * a);
-                Console.WriteLine("Есть один корень");
-                Console.WriteLine($" X = {x} ");
-                Console.WriteLine(a * (x*x) + b*x + c );
+                ar[0] = x;
+               // Console.WriteLine("Есть один корень");
+                //Console.WriteLine($" X = {x} ");
+                //Console.WriteLine(a * (x*x) + b*x + c );
             }
             else if ( dis > 0)
             {
 
                 x1 = (-b + Math.Sqrt(dis)) / (2*a);
                 x2 = (-b - Math.Sqrt(dis)) / (2 * a);
+                ar[0] = x1;
+                ar[1] = x2;
 
-                Console.WriteLine("Есть два кореня");
-                Console.WriteLine($" X1 = {x1} X2 = {x2} ");
-                Console.WriteLine(a * (x1 * x1) + b * x1 + c);
+                //Console.WriteLine("Есть два кореня");
+                //Console.WriteLine($" X1 = {x1} X2 = {x2} ");
+                //Console.WriteLine(a * (x1 * x1) + b * x1 + c);
             }
+            return ar;
 
         }
 
