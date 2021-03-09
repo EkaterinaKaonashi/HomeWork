@@ -31,31 +31,33 @@ namespace HomeWork
 
         }
 
-        public static void ThirdTask()
+        public static int[] ThirdTask(int a ,int b)
         {
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
+            
 
             int result = a / b;
 
             int remainder = a % b;
+            int[] array = new int[1];
+            array[0] = result;
+            array[1] = remainder;
 
-            Console.WriteLine($"Рузультат = {result} " + $" Остаток от деления = {remainder}");
+            return  array;
+
+            //Console.WriteLine($"Рузультат = {result} " + $" Остаток от деления = {remainder}");
         }
 
-        public static void FourthTask()
+        public static int FourthTask(int a, int b,int c)
         {
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
-            int c = Convert.ToInt32(Console.ReadLine());
+            
             int x = (c - b) / a;
 
             Console.WriteLine("Найти переменную Х в: A * X + B = C ");
 
-            
-            
 
-            Console.WriteLine(x);
+
+
+            return x;
         }
 
         public static void FiveTask()
