@@ -2,12 +2,12 @@
   <MonoDevelop.Ide.ItemProperties.HomeWork PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="HomeWork/Lesson005.cs">
     <Files>
-      <File FileName="HomeWork/Lesson001.cs" Line="62" Column="38" />
+      <File FileName="HomeWork/Lesson001.cs" Line="34" Column="27" />
       <File FileName="HomeWork/Program.cs" />
       <File FileName="HomeWork/Lesson002.cs" />
       <File FileName="HomeWork/Lesson003.cs" />
       <File FileName="HomeWork/Lesson004.cs" />
-      <File FileName="HomeWork/Lesson005.cs" Line="146" Column="22" />
+      <File FileName="HomeWork/Lesson005.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -28,7 +28,6 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/ekaterina/Projects/MyHomeWork/HomeWork/Lesson003.cs" relfile="HomeWork/Lesson003.cs" line="187" column="1" />
-      <Breakpoint file="/Users/ekaterina/Projects/MyHomeWork/HomeWork/Lesson005.cs" relfile="HomeWork/Lesson005.cs" line="146" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

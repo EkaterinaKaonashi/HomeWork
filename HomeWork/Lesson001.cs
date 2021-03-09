@@ -5,14 +5,13 @@ namespace HomeWork
     public class Lesson001
     {
 
-        public static void FirstTask()
+        public static double FirstTask(double a,double b)
         {
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
+            double result = ((5 * a) + (b * b)) / (b - a);
 
-            int result = ((5 * a) + (b * b)) / (b - a);
+            return result;
 
-            Console.WriteLine(result);
+            
         }
 
         public static void SecondTask()
