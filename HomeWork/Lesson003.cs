@@ -47,10 +47,10 @@ namespace HomeWork
             
         }
 
-        public static void ThirdTask()
+        public static int ThirdTask(int a)
         {
             //Пользователь вводит 1 число (A). Найдите количество положительных целых чисел, квадрат которых меньше A.
-            int a = Convert.ToInt32(Console.ReadLine());
+           
 
             int x = 0;
             int count = 0;
@@ -63,15 +63,15 @@ namespace HomeWork
 
             }
             Console.WriteLine(x);
-            Console.WriteLine(count);
+            return count;
         }
 
 
-        public static void FourthTask()
+        public static int FourthTask(int a )
         {
             //Пользователь вводит 1 число (A). Вывести наибольший делитель (кроме самого A) числа A.
 
-            int a = Convert.ToInt32(Console.ReadLine());
+            
 
             int del=1;
 
@@ -87,19 +87,19 @@ namespace HomeWork
                 }
             }
 
-            Console.WriteLine(del);
+            return del;
         }
 
-        public static void FifthTask()
+        public static int FifthTask(int a,int b)
         {
             //Пользователь вводит 2 числа(A и B).Вывести сумму всех чисел из диапазона от A до B, которые делятся без остатка на 7. (Учтите, что при вводе B может оказаться меньше A).
 
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
+            
 
             int sum=0;
             int min = (a < b) ? a : b;
             int max = (a > b) ? a : b;
+            
 
 
             for( min = min; min <= max; min++)
@@ -110,7 +110,7 @@ namespace HomeWork
                 }
             }
 
-            Console.WriteLine(sum);
+            return sum;
         }
 
         public static void SixthTask()
