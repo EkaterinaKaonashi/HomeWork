@@ -64,42 +64,40 @@ namespace HomeWork
 
         }
 
-        public static void ThirdTask()
+        public static int[] ThirdTask(int a,int b,int c)
         {
             //Пользователь вводит 3 числа (A, B и С). Выведите их в консоль в порядке возрастания.
 
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
-            int c = Convert.ToInt32(Console.ReadLine());
+            int[] ar = new int[2];
 
             if (a < b && a < c)
             {
-                Console.WriteLine(a);
+                ar[0] = a;
 
                 if (b < c)
                 {
-                    Console.WriteLine(b);
-                    Console.WriteLine(c);
+                    ar[1] = b;
+                    ar[2] = c;
                 }
                 else
                 {
-                    Console.WriteLine(c);
-                    Console.WriteLine(b);
+                    ar[1] = c;
+                    ar[2] = b;
                 }
             }
             else if (b < a && b < c)
             {
-                Console.WriteLine(b);
+                ar[0] = b;
 
                 if (a < c)
                 {
-                    Console.WriteLine(a);
-                    Console.WriteLine(c);
+                    ar[1] = a;
+                    ar[2] = c;
                 }
                 else
                 {
-                    Console.WriteLine(c);
-                    Console.WriteLine(a);
+                    ar[1] = c;
+                    ar[2] = a;
 
 
                 }
@@ -107,19 +105,21 @@ namespace HomeWork
 
             else
             {
-                Console.WriteLine(c);
+                ar[0] = c; 
 
                 if (a < b)
                 {
-                    Console.WriteLine(a);
-                    Console.WriteLine(b);
+                    ar[1] = a;
+                    ar[2] = b;
                 }
                 else
                 {
-                    Console.WriteLine(b);
-                    Console.WriteLine(a);
+                    ar[1] = b;
+                    ar[2] = a;
                 }
             }
+
+            return ar;
         }
 
         public static void FourthTask()
