@@ -27,11 +27,11 @@ namespace HomeWork
         {
             //Пользователь вводит 1 число (A). Вывести все числа от 1 до 1000, которые делятся на A
 
-
+            int j = 0;
             int[] ar = new int[1000 / a];
-            for (int i = 1; i < 1000; i++)
+            for (int i = 1; i <= 1000; i++)
             {
-                int j = 0;
+                
                 
                 if ( i % a == 0)
                 {
@@ -52,7 +52,7 @@ namespace HomeWork
             //Пользователь вводит 1 число (A). Найдите количество положительных целых чисел, квадрат которых меньше A.
            
 
-            int x = 0;
+            int x = 1;
             int count = 0;
             while ( x * x < a)
             {
@@ -113,14 +113,24 @@ namespace HomeWork
             return sum;
         }
 
-        public static void SixthTask()
+        public static int[] SixthTask(int n )
         {
             //Пользователь вводит 1 число(N).Выведите N - ое число ряда фибоначчи.В ряду фибоначчи каждое следующее число является суммой двух предыдущих. Первое и второе считаются равными 1.
 
-            int n = Convert.ToInt32(Console.ReadLine());
+            if (n == 0)
+            {
+                throw new Exception("Значение должно быть больше 0");
+            }
+
+
             int Fn = 1;
             int Fn2 = 1;
             int sum;
+            int[] ar = new int[n];
+            ar[0] = Fn;
+            ar[1] = Fn2;
+
+            int count = 2;
 
             int i = 0; 
             while (i < n-2)
@@ -132,19 +142,20 @@ namespace HomeWork
 
                 //Fn = (Fn - 1) + (Fn- 2);
                
-                Console.WriteLine(sum);
+                
+                ar[count] = sum;
+                count++;
 
             }
+            return ar;
             
         }
 
-        public static void SeventhTask()
+        public static int SeventhTask(int a,int b)
         {
             //Пользователь вводит 2 числа.Найти их наибольший общий делитель используя алгоритм Евклида.
 
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
-
+            int res;
             while (a != 0 && b != 0)
             { 
                     if(a > b)
@@ -160,16 +171,18 @@ namespace HomeWork
 
             if(a > b)
             {
-                Console.WriteLine("Наибольший общий делитель " + a);
+                res = a;
             }
             else
             {
-                Console.WriteLine("Наибольший общий делитель " + b);
+                res = b;
             }
+
+            return res;
 
         }
 
-        public static void EighthTask()
+        public static int EighthTask(int number)
         {
             //Пользователь вводит целое положительное число, которое является кубом целого числа N. Найдите число N методом половинного деления.
 
@@ -180,7 +193,7 @@ namespace HomeWork
             //Console.WriteLine(n);
 
             Console.WriteLine("Введите число больше 0:");
-                int number = Convert.ToInt32(Console.ReadLine());
+                
 
             int left = 0;
              int midle = 0;
@@ -199,7 +212,7 @@ namespace HomeWork
                 }
             }
 
-            Console.WriteLine($"{midle} в 3 степени = {number}");
+            return midle; 
 
 
             
@@ -209,11 +222,10 @@ namespace HomeWork
 
         }
 
-        public static void NinthTask()
+        public static int NinthTask(int a)
         {
             //Пользователь вводит 1 число. Найти количество нечетных цифр этого числа.
-            int a = Convert.ToInt32(Console.ReadLine());
-
+            
             int oddNumber = 0;
 
            for (int i=0; i <= a; i++)
@@ -224,41 +236,48 @@ namespace HomeWork
                 }
             }
 
-            
-            Console.WriteLine(oddNumber);
+
+            return oddNumber;
 
         }
 
-        public static void TenthTask()
+        public static int TenthTask(int num)
         {
             //Пользователь вводит 1 число. Найти число, которое является зеркальным отображением последовательности цифр заданного числа, например, задано число 123, вывести 321.
 
-            int a = Convert.ToInt32(Console.ReadLine());
+           string a = Convert.ToString(num);
+            
 
-            int reverse = a % 10; // почему без этого действия выводит только 2 цифры?
-            Console.Write(reverse);
+            //int reverse = a % 10; // почему без этого действия выводит только 2 цифры?
+            //Console.Write(reverse);
 
-            while ((a = a/10) != 0)
+
+            //while ((a = a / 10) != 0)
+            //{
+            //    Console.Write(a % 10);
+            //}
+            string rev = "";
+            for(int i = a.Length -1; i>=0; i--)
             {
-                Console.Write(a % 10);
+                rev += a[i];
             }
+            int newrev = Convert.ToInt32(rev);
+            return newrev;
 
-
-
-           
         }
 
-        public static void EleventhTask()
+        public static int[] EleventhTask(string n)
         {
             // Пользователь вводит целое положительное  число(N).Выведите числа в диапазоне от 1 до N, сумма четных цифр которых больше суммы нечетных
 
-            string n = Console.ReadLine();
+            
 
             int evenNumberSum = 0;
             int oddNumberSum= 0;
             int even = 0;
             int odd = 0;
 
+            int count = 0;
             for (int i = 0; i < n.Length; i++ )
             {
                 int rev = int.Parse(n[i].ToString());
@@ -267,6 +286,7 @@ namespace HomeWork
 
                 {
                     evenNumberSum = evenNumberSum + rev;
+                    count++;
                 }
 
                 else
@@ -275,6 +295,8 @@ namespace HomeWork
                 }
             }
 
+            int[] ar = new int[count];
+            int j = 0;
             if (evenNumberSum > oddNumberSum)
             {
 
@@ -285,29 +307,31 @@ namespace HomeWork
                     if (rev % 2 == 0)
 
                     {
-                        Console.Write(rev);
+                        ar[j] = rev;
+                        j++;
 
                     }
                 }
             }
             else
             {
-                Console.WriteLine("Сумма нечетных чисел больше");
+               throw new Exception ("Сумма нечетных чисел больше");
             }
+
+            return ar;
               
         }
 
-        public static void Twelfth()
+        public static string Twelfth(string n1,string n2)
         {
             // Пользователь вводит 2 числа.Сообщите, есть ли в написании двух чисел одинаковые цифры. Например, для пары 123 и 3456789, ответом будет являться “ДА”, а, для пары 500 и 99 - “НЕТ”.
-            string n1 = Console.ReadLine();
-            string n2 = Console.ReadLine();
+            
             char result = ' ';
             bool bo = false;
 
             for(int i = 0; i < n1.Length;i++)
             {
-                result = n2[i];
+                result = n1[i];
                     //Convert.ToString(n1[i]);
                 for(int j = 0; j< n1.Length; j++)
                 {
@@ -321,14 +345,17 @@ namespace HomeWork
                 }
 
             }
+            string ans;
             if (bo)
             {
-                Console.WriteLine("ДА");
+                ans = "ДА";
             }
             else
             {
-                Console.WriteLine("Нет");
+               ans =  "Нет";
             }
+
+            return ans;
         }
     }
 }

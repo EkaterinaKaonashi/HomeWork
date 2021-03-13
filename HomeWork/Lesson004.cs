@@ -7,23 +7,23 @@ namespace HomeWork
         {
         }
 
-        public static void FirstTask()
+        public static int FirstTask(int[] array)
         {
             //Найти минимальный элемент массива
 
-            int[] array = new int[10];
+            
             //{10,15,75,32,522,86,11,21,4,56};
 
 
-            Random random = new Random();
+            //Random random = new Random();
 
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i] = random.Next();
-                Console.Write(array[i] + " ");
-            }
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    array[i] = random.Next();
+            //    Console.Write(array[i] + " ");
+            //}
 
-            Console.WriteLine();
+            //Console.WriteLine();
 
             int min = array[0];
 
@@ -35,54 +35,37 @@ namespace HomeWork
                 }
             }
 
-            Console.WriteLine(min);
+            return min;
 
 
         }
 
-        public static void SecondTask()
+        public static int SecondTask(int[] array)
         {
             //Найти максимальный элемент массива
-            int[] array = new int[18];
-
-
-            Random random = new Random();
-
-            //for(int i = 0; i < array.Length; i++)
-            //{
-            //    array[i]
-            //}
+            
 
             int max = array[0];
 
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = random.Next();
-                Console.Write(array[i] + " ");
+               
 
                 if (array[i] > max)
                 {
                     max = array[i];
                 }
             }
-            Console.WriteLine();
-            Console.WriteLine(max);
+            return max;
 
         }
 
-        public static void ThirdTask()
+        public static int ThirdTask(int[] array)
         {
             //Найти индекс минимального элемента массива
-            int[] array = new int[21];
-            Random random = new Random();
+            
 
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i] = random.Next(-100, 101);
-                Console.Write(array[i] + " ");
-            }
-
-            Console.WriteLine();
+           
 
             int minValue = array[0];
             int index = 0;
@@ -96,25 +79,15 @@ namespace HomeWork
                 }
             }
 
-            Console.WriteLine(index);
+            return index;
 
         }
 
-        public static void FourthTask()
+        public static int FourthTask(int[] array)
         {
             //Найти индекс максимального элемента массива
 
-            int[] array = new int[32];
-            Random r = new Random();
-
-
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i] = r.Next(-15, 26);
-                Console.Write(array[i] + " ");
-            }
-
-
+         
             int maxValue = array[0];
             int max = 0;
 
@@ -128,54 +101,47 @@ namespace HomeWork
 
                 }
             }
-            Console.WriteLine();
-            Console.WriteLine(max);
+            return max;
         }
 
-        public static void FifthTask()
+        public static int FifthTask(int[]array)
         {
             //Посчитать сумму элементов массива с нечетными индексами
 
-            int[] array = new int[7];
-            Random r = new Random();
+           
             int sum = 0;
 
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = r.Next(0, 10);
+                
                 if (i % 2 != 0)
                 {
                     sum += array[i];
                 }
-
-                Console.Write(array[i] + " ");
             }
-            Console.WriteLine();
-            Console.WriteLine(sum);
+
+            return sum;
         }
 
-        public static void SixthTask()
+        public static int[] SixthTask(int[] array)
         {
-            int[] array = new int[6] { 1, 2, 3, 4, 5,6};
+            //Сделать реверс массива (массив в обратном направлении)
+
+            
 
             for (int i = 0; i < array.Length / 2; i++)
             {
                 int tmp = array[i];
-                array[i] = array.Length   - i;
+                array[i] = array[array.Length   - i -1];
                 array[array.Length  - 1 -i] = tmp;
             }
-            foreach (int i in array)
-            {
-                Console.WriteLine(i);
-            }
+            return array;
 
         }
 
-        public static void SeventhTask()
+        public static int SeventhTask(int[] array)
         {
             //Посчитать количество нечетных элементов массива
-
-            int[] array = new int[9] { 3,7,3,2,6,5,8,7,4};
 
             int count = 0;
             for (int i = 0; i < array.Length; i++)
@@ -186,14 +152,15 @@ namespace HomeWork
                     count++;
                 }
             }
-            Console.WriteLine(count);
+            return count;
 
         }
 
-        public static void EighthTask()
-        {
-            int[] array = new int[7] { 1, 2, 3, 4,5,6,7};
+        public static int[] EighthTask(int[] array)
             
+        {
+            //Поменять местами первую и вторую половину массива, например, для массива 1 2 3 4, результат 3 4 1 2, или для 12345 - 45312.
+
             for ( int i = 0; i < array.Length / 2; i++)
             {
                 if (array.Length %2 != 0)
@@ -210,29 +177,14 @@ namespace HomeWork
                     array[array.Length / 2 + i] = tmp;
                 }
             }
-            
-            
 
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.Write(array[i] + " ");
-            }
-
-
+            return array;
 
         }
 
-        public static void BubbleSort()
+        public static int[] BubbleSort(int[]array)
         {
-            int[] array = new int[15];
-            Random random = new Random();
-            for(int i = 0; i < array.Length; i++)
-            {
-                array[i] = random.Next(0,26);
-                Console.Write(array[i] + " ");
-            }
-            Console.WriteLine();
-
+            //Отсортировать массив по возрастанию одним из способов:  пузырьком(Bubble
             int tmp;
 
             for(int i = 0; i<array.Length; i++)
@@ -248,26 +200,15 @@ namespace HomeWork
                     }
                 }
             }
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.Write(array[i] + " ");
-            }
+            return array;
         }
 
-        public static void InsertSort()
+        public static int[] InsertSort(int[] array)
         {
-        int[] array = new int[21];
-        Random random = new Random();
-        for (int i = 0; i < array.Length; i++)
-        {
-        array[i] = random.Next(0, 31);
-        Console.Write(array[i] + " ");
-        }
-        Console.WriteLine();
 
+            //Отсортировать массив по убыванию одним из способов
 
-            
-            for(int i = 0; i < array.Length-1; i++)
+            for (int i = 0; i < array.Length-1; i++)
             {
                 int indexOfMax = i;
                 for (int j = i; j<array.Length; j++)
@@ -288,14 +229,8 @@ namespace HomeWork
                 array[indexOfMax] = tmp; 
 
             }
-           
+            return array;
 
-
-        
-        for (int i = 0; i < array.Length; i++)
-        {
-        Console.Write(array[i] + " ");
-        }
         }
     }
 }

@@ -6,7 +6,7 @@ namespace HomeWork
     {
         static void Main(string[] args)            
         {
-            Lesson005.SixthTask();
+            Lesson004.BubbleSort(new int[] { 3, 2, 1 });
 
 
         }

@@ -2,12 +2,11 @@
   <MonoDevelop.Ide.ItemProperties.HomeWork PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="HomeWork/Lesson005.cs">
     <Files>
-      <File FileName="HomeWork/Lesson001.cs" Line="34" Column="27" />
-      <File FileName="HomeWork/Program.cs" />
-      <File FileName="HomeWork/Lesson002.cs" />
-      <File FileName="HomeWork/Lesson003.cs" />
+      <File FileName="HomeWork/Program.cs" Line="9" Column="1" />
       <File FileName="HomeWork/Lesson004.cs" />
+      <File FileName="HomeWork.Tests/Lesson004Test.cs" />
       <File FileName="HomeWork/Lesson005.cs" Line="1" Column="1" />
+      <File FileName="HomeWork.Tests/Lesson005Test.cs" Line="6" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +15,13 @@
             <Node name="HomeWork" expanded="True">
               <Node name="Lesson005.cs" selected="True" />
             </Node>
+            <Node name="HomeWork.Tests" expanded="True" />
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="MyHomeWork" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
@@ -24,10 +29,16 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="../../../HomeWork/Lesson003.cs" line="19" column="16" endLine="19" endColumn="22" offsetX="-1" offsetY="-1" expression="result" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <DisabledProjects>
+    <String>HomeWorkTests/HomeWorkTests.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/ekaterina/Projects/MyHomeWork/HomeWork/Lesson003.cs" relfile="HomeWork/Lesson003.cs" line="187" column="1" />
+      <Breakpoint file="/Users/ekaterina/Projects/MyHomeWork/HomeWork/Lesson003.cs" relfile="HomeWork/Lesson003.cs" line="288" column="1" />
+      <Breakpoint file="/Users/ekaterina/Projects/MyHomeWork/HomeWork/Lesson003.cs" relfile="HomeWork/Lesson003.cs" line="330" column="1" />
+      <Breakpoint file="/Users/ekaterina/Projects/MyHomeWork/HomeWork/Lesson003.cs" relfile="HomeWork/Lesson003.cs" line="333" column="1" />
+      <Breakpoint file="/Users/ekaterina/Projects/MyHomeWork/HomeWork/Program.cs" relfile="HomeWork/Program.cs" line="9" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

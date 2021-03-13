@@ -37,8 +37,8 @@ namespace HomeWork
             return result;
 
         }
-        
-        public static string SecondTask(int x,int y)
+
+        public static string SecondTask(int x, int y)
         {
             //Пользователь вводит 2 числа(X и Y).Определить какой четверти принадлежит точка с координатами(X, Y).
             string result = "";
@@ -59,7 +59,10 @@ namespace HomeWork
             {
                 result = "Это четвертая четверть";
             }
-
+            if (x == 0 && y == 0 || x == 0 && y > 0 || y == 0 && x > 0)
+            {
+                result = "точка лежит на плоскости";
+            }
             return result;
 
         }
@@ -68,7 +71,7 @@ namespace HomeWork
         {
             //Пользователь вводит 3 числа (A, B и С). Выведите их в консоль в порядке возрастания.
 
-            int[] ar = new int[2];
+            int[] ar = new int[3];
 
             if (a < b && a < c)
             {
@@ -132,13 +135,13 @@ namespace HomeWork
             double x1 = 0;
             double x2;
             double x;
-            double[] ar = new double[1];
+            double[] ar = new double[2];
 
             if (dis < 0)
 
             {
-                
-                Console.WriteLine("Корней нет");
+
+                throw new Exception("Дискриминант меньше 0");
 
             }
             if (dis == 0)

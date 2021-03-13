@@ -6,15 +6,10 @@ namespace HomeWork
         public Lesson005()
         {
         }
-        public static void FirstTask()
+        public static int FirstTask(int[,] array)
         {
             //Найти минимальный элемент массива
-            int[,] array = new int[3, 5]
-            {
-                { 12,14,15,16,61 },
-                {41,9,8,9, 9} ,
-                {31,54,73,21,7 }
-            };
+            
 
             int indexI = 0;
             int indexJ = 0;
@@ -31,16 +26,11 @@ namespace HomeWork
                 }
 
             }
-            Console.WriteLine(array[indexI, indexJ]);
+            return (array[indexI, indexJ]);
         }
-        public static void SecondTask()
+        public static int SecondTask(int[,] array)
         {
-            int[,] array = new int[3, 5]
-            {
-                {2,41,5,15,67 },
-                {5,26,7,2,6 },
-                {5,7,26,78,2 }
-            };
+            
 
             int indexI = 0;
             int indexJ = 0;
@@ -55,22 +45,17 @@ namespace HomeWork
                     }
                 }
             }
-            Console.WriteLine(array[indexI, indexJ]);
+          return (array[indexI, indexJ]);
 
 
         }
 
-        public static void ThirdTask()
+        public static int[] ThirdTask(int[,] array)
         {
             //Найти индекс минимального элемента массива
 
-            int[,] array = new int[3, 5]
-            {
-                { 12,17,15,16,61 },
-                {41,9,8,9, 9} ,
-                {31,54,73,21,71 }
-            };
 
+            int[] arrayOfIndex = new int[2];
             int indexI = 0;
             int indexJ = 0;
 
@@ -85,19 +70,16 @@ namespace HomeWork
                     }
                 }
             }
-            Console.WriteLine($"Индекс минимального элемента: {indexI},{indexJ}");
+            arrayOfIndex[0] = indexI;
+            arrayOfIndex[1] = indexJ;
+            return arrayOfIndex; // как вернуть два числа без массива?
 
         }
-        public static void FouthTask()
+        public static int[] FouthTask(int[,] array)
         {
             //Найти индекс максимального элемента массива
 
-            int[,] array = new int[3, 5]
-            {
-                { 12,14,15,16,61 },
-                {41,9,8,9, 9} ,
-                {31,54,73,21,71 }
-            };
+            
             int indexI = 0;
             int indexJ = 0;
 
@@ -112,22 +94,17 @@ namespace HomeWork
                     }
                 }
             }
-            Console.WriteLine($"Индекс максимального элемента: {indexI},{indexJ}");
+            int[] nw = new int[2];
+            nw[0] = indexI;
+            nw[1] = indexJ;
+            return nw;
 
 
         }
-        public static void FivethTask()
+        public static int FivethTask(int[,] array)
         {
             //Найти количество элементов массива, которые больше всех своих соседей одновременно.
 
-
-            int[,] array = new int[4, 5]
-            {
-                {12,17,15,16,61 },
-                {41,9,8,9, 7} ,
-                {31,54,2,21,1 },
-                {1,2,1,4,3 }
-            };
 
             int n = array.GetLength(0);
             int k = array.GetLength(1);
@@ -169,7 +146,7 @@ namespace HomeWork
                     count++;
                 }
             }
-            Console.WriteLine(count);
+            return count;
         }
 
         static bool checkIndex(int index, int length)
@@ -177,29 +154,18 @@ namespace HomeWork
             return index >= 0 && index < length;
         }
 
-        public static void SixthTask()
+        public static int[,] SixthTask(int[,] array)
         {
             //Отразите массив относительно его главной диагонали.
-
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
+            
+            int a = array.GetLength(0);
+            int b = array.GetLength(1);
             bool cheacSize = a / b == 1 ? true : false;
 
-            Random r = new Random();
+           
 
-            int[,] array = new int[a, b];
+            //int[,] array = new int[a, b];
 
-            for (int i = 0; i < array.GetLength(0); i++)
-            {
-                for (int j = 0; j < array.GetLength(1); j++)
-                {
-                    array[i, j] = r.Next(0, 15);
-                    Console.Write(array[i, j] + " ");
-                }
-                Console.WriteLine();
-            }
-
-            Console.WriteLine();
 
             int l = array.GetLength(0);
             int n = array.GetLength(1);
@@ -219,10 +185,7 @@ namespace HomeWork
                         }
                     }
                 }
-                Console.WriteLine();
-                PrintArray(array);
-
-                Console.WriteLine();
+                return array;
             }
             else
             {
@@ -232,12 +195,12 @@ namespace HomeWork
                     for(int j = 0; j < newArray.GetLength(1); j ++)
                     {
                         newArray[i, j] = array[j, i];
-                        Console.Write(newArray[i, j] + " ");
+                        
                     }
-                    Console.WriteLine();
+                    
                 }
 
-
+                return newArray;
 
             }
 
@@ -299,12 +262,6 @@ namespace HomeWork
             return index >= 0 && index < length;
         }
 
-        public static void SixthTask1()
-        {
-            //Отразите массив относительно его главной диагонали
-
-        }
-
-
+      
     }
 }
