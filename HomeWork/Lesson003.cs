@@ -26,7 +26,10 @@ namespace HomeWork
         public static int[] SecondTask(int a)
         {
             //Пользователь вводит 1 число (A). Вывести все числа от 1 до 1000, которые делятся на A
-
+            if(a == 0)
+            {
+                throw new ArgumentException();
+            }
             int j = 0;
             int[] ar = new int[1000 / a];
             for (int i = 1; i <= 1000; i++)

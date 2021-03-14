@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 
 namespace HomeWork.Tests
 {
@@ -40,6 +41,23 @@ namespace HomeWork.Tests
         {
             string actual = Lesson001.FiveTask(x1, y1, x2, y2);
             Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestCase(10,10)]
+        public void FirstTask_WhenBequalsToZero_ShouldException(int a , int b)
+        {
+            Assert.Throws<DivideByZeroException>(() => Lesson001.FirstTask(a, b));
+        }
+        [TestCase(30,0)]
+        public void ThirdTask_WhenBequalsToZero_ShouldException(int a, int b)
+        {
+            Assert.Throws<DivideByZeroException>(() => Lesson001.ThirdTask(a, b));
+        }
+        [TestCase(0, 30,15)]
+        public static void FourthTask_WhenBequalsToZero_ShouldException(int a, int b, int c)
+        {
+            Assert.Throws<DivideByZeroException>(() => Lesson001.FourthTask(a, b, c));
         }
     }
 }

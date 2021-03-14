@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 
 namespace HomeWork.Tests
 {
@@ -122,11 +123,23 @@ namespace HomeWork.Tests
         [TestCase("2341","44123", "ДА" )]
         [TestCase("12134241341", "000234141464123", "ДА")]
         [TestCase("006601", "2323232", "Нет")]
+
         public void TwelfthTest(string n1, string n2,string expected)
         {
             string actual = Lesson003.Twelfth(n1, n2);
             Assert.AreEqual(expected, actual);
 
+        }
+        [TestCase(0)]
+        public void SecondTask_WhenAequal0_shouldException(int a)
+        {
+            Assert.Throws<ArgumentException>(() => Lesson003.SecondTask(a));
+        }
+
+        [TestCase(0)]
+        public void SixthTask_WhenNequalZero_ShouldException (int n)
+        {
+            Assert.Throws<Exception>(() => Lesson003.SixthTask(n));
         }
 
     }

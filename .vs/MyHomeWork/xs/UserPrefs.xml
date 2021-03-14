@@ -1,27 +1,38 @@
 ﻿<Properties StartupConfiguration="{C2D31EB8-FB80-461D-AD1E-6AF3F55D9A39}|Default">
   <MonoDevelop.Ide.ItemProperties.HomeWork PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HomeWork/Lesson005.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HomeWork.Tests/Lesson003Test.cs">
     <Files>
       <File FileName="HomeWork/Program.cs" Line="9" Column="1" />
-      <File FileName="HomeWork/Lesson004.cs" />
-      <File FileName="HomeWork.Tests/Lesson004Test.cs" />
-      <File FileName="HomeWork/Lesson005.cs" Line="1" Column="1" />
-      <File FileName="HomeWork.Tests/Lesson005Test.cs" Line="6" Column="9" />
+      <File FileName="HomeWork/Lesson004.cs" Line="1" Column="1" />
+      <File FileName="HomeWork.Tests/Lesson004Test.cs" Line="1" Column="1" />
+      <File FileName="HomeWork/Lesson005.cs" />
+      <File FileName="HomeWork.Tests/Lesson005Test.cs" Line="79" Column="1" />
+      <File FileName="HomeWork.Tests/Lesson001Tests.cs" Line="57" Column="27" />
+      <File FileName="HomeWork/Lesson003.cs" Line="31" Column="47" />
+      <File FileName="HomeWork.Tests/Lesson003Test.cs" Line="133" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MyHomeWork" expanded="True">
-            <Node name="HomeWork" expanded="True">
-              <Node name="Lesson005.cs" selected="True" />
+            <Node name="HomeWork" expanded="True" />
+            <Node name="HomeWork.Tests" expanded="True">
+              <Node name="Lesson003Test.cs" selected="True" />
             </Node>
-            <Node name="HomeWork.Tests" expanded="True" />
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="MyHomeWork" expanded="True" selected="True" />
+          <Node name="MyHomeWork" expanded="True">
+            <Node name="HomeWork.Tests" expanded="True">
+              <Node name="HomeWork.Tests" expanded="True">
+                <Node name="Lesson002Tests" expanded="True">
+                  <Node name="FourthTask_WhenDisLess0_ShouldException(1,-3,0)" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
@@ -35,9 +46,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/ekaterina/Projects/MyHomeWork/HomeWork/Lesson003.cs" relfile="HomeWork/Lesson003.cs" line="288" column="1" />
-      <Breakpoint file="/Users/ekaterina/Projects/MyHomeWork/HomeWork/Lesson003.cs" relfile="HomeWork/Lesson003.cs" line="330" column="1" />
-      <Breakpoint file="/Users/ekaterina/Projects/MyHomeWork/HomeWork/Lesson003.cs" relfile="HomeWork/Lesson003.cs" line="333" column="1" />
+      <Breakpoint file="/Users/ekaterina/Projects/MyHomeWork/HomeWork/Lesson003.cs" relfile="HomeWork/Lesson003.cs" line="291" column="1" />
+      <Breakpoint file="/Users/ekaterina/Projects/MyHomeWork/HomeWork/Lesson003.cs" relfile="HomeWork/Lesson003.cs" line="332" column="1" />
       <Breakpoint file="/Users/ekaterina/Projects/MyHomeWork/HomeWork/Program.cs" relfile="HomeWork/Program.cs" line="9" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

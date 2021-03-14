@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 
 namespace HomeWork.Tests
 {
@@ -49,10 +50,16 @@ namespace HomeWork.Tests
         [TestCase(19, "девятнадцать ")]
         [TestCase(10, "десять ")]
         [TestCase(90, "девяносто ")]
+
         public void FifthTaskTest(int number, string expected)
         {
             string actual = Lesson002.FifthTask(number);
             Assert.AreEqual(expected, actual);
         }
+        //[TestCase(1,-3,0)]
+        //public void FourthTask_WhenDisLess0_ShouldException(double a, double b, double c)
+        //{
+        //    Assert.Throws<Exception>(() => Lesson002.FourthTask(a, b, c));
+        //}
     }
 }
